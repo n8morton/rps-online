@@ -1,0 +1,25 @@
+/* div {
+    border: 1px solid black;
+} */
+.col-md-3{
+    
+    border-bottom: 1px double lightgrey;
+    
+
+}
+.col-md-6{
+    border-left: 1px double lightgrey;
+    border-right: 1px double lightgrey;
+    border-bottom: 1px double lightgrey;
+    padding-bottom: .75rem;
+    
+}
+
+.jumbotron {
+    padding:0px;
+    margin:0px;
+}
+
+.form-group{
+    margin-bottom: .75rem;
+}
