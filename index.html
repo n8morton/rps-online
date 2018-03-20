@@ -11,15 +11,34 @@
 <body>
 
     <div class="row">
-        <div class="col-md-3" id="player1-window">
-            player 1
-        </div>
+            <div class="col-md-3">
+                    <h1 id="player1-waiting">Waiting for player</h1>
+                    <div class="card" style="width: 18rem;" id="player1-window">
+                        <div class="card-header">
+                            <h3 id="player1-username"></h3>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item" id="player1-pick">
+                                <h5 id="player1-status">Waiting for oponent to login</h5>
+                                <div id="player1-buttons">
+                                    <button type="button" class="btn btn-primary" id="player1-rock" data-selection="rock">Rock</button>
+                                    <button type="button" class="btn btn-primary" id="player1-paper" data-selection="paper">Paper</button>
+                                    <button type="button" class="btn btn-primary" id="player1-scissors" data-selection="scissors">Scissors</button>
+
+                                </div>
+                            </li>
+                            <li class="list-group-item" id="player1-wins">Wins:</li>
+                            <li class="list-group-item" id="player1-losses">Losses:</li>
+                            <li class="list-group-item" id="player1-ties">Ties:</li>
+                        </ul>
+                    </div>
+                </div>
         <div class="col-md-6">
             <div class="row">
                 <div class="col-md-12">
                     <div class="jumbotron jumbotron-fluid">
                         <div class="container">
-                            <h1 class="display-4">Rock Paper Scrissors</h1>
+                            <h1 class="display-4">Rock Paper Scissors</h1>
                             <p class="lead">Online Multiplayer Edition</p>
                         </div>
                     </div>
@@ -28,49 +47,95 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <p class="lead">Please sign in to get started.</p>
-                    <form>
-                        <div class="form-group">
-                            <!-- <label for="exampleInputEmail1">Email address</label> -->
-                            <input type="text" class="form-control" id="login-username"  placeholder="Username">
-                            
-                        </div>
-                        <div class="form-group">
-                            <!-- <label for="exampleInputPassword1">Password</label> -->
-                            <input type="password" class="form-control" id="login-password" placeholder="Password">
-                        </div>
-                        <button type="submit" class="btn btn-primary" id="login-submit">Login</button>
-                    </form>
-                    <p class="lead">First time here? Please sign up.</p>
-                    <form>
-                        
-                        <div class="form-group">
-                            <!-- <label for="exampleInputPassword1">Password</label> -->
-                            <input type="text" class="form-control" id="reg-username" placeholder="User Name">
-                        </div>
-                        <div class="form-group">
-                            <!-- <label for="exampleInputEmail1">Email address</label> -->
-                            <input type="password" class="form-control" id="reg-password"  placeholder="Password">
+                    <div id="login-window">
+                        <p class="lead">Please sign in to get started.</p>
+                        <form>
+                            <div class="form-group">
+                                <!-- <label for="exampleInputEmail1">Email address</label> -->
+                                <input type="text" class="form-control" id="login-username"  placeholder="Username">
                                 
-                        </div>
-                        <div class="form-group">
-                            <!-- <label for="exampleInputPassword1">Password</label> -->
-                            <input type="password" class="form-control" id="reg-password-confirm" placeholder="Confirm Password">
-                        </div>
-                        <button type="submit" class="btn btn-primary" id="reg-submit">Sign Up</button>
-                    </form>
+                            </div>
+                            <div class="form-group">
+                                <!-- <label for="exampleInputPassword1">Password</label> -->
+                                <input type="password" class="form-control" id="login-password" placeholder="Password">
+                            </div>
+                            <button type="submit" class="btn btn-primary" id="login-submit">Login</button>
+                        </form>
+                        <p class="lead">First time here? Please sign up.</p>
+                        <form>
+                            
+                            <div class="form-group">
+                                <!-- <label for="exampleInputPassword1">Password</label> -->
+                                <input type="text" class="form-control" id="reg-username" placeholder="User Name">
+                            </div>
+                            <div class="form-group">
+                                <!-- <label for="exampleInputEmail1">Email address</label> -->
+                                <input type="password" class="form-control" id="reg-password"  placeholder="Password">
+                                    
+                            </div>
+                            <div class="form-group">
+                                <!-- <label for="exampleInputPassword1">Password</label> -->
+                                <input type="password" class="form-control" id="reg-password-confirm" placeholder="Confirm Password">
+                            </div>
+                            <button type="submit" class="btn btn-primary" id="reg-submit">Sign Up</button>
+                        </form>
+                    </div>
+                    <div id="gameplay-window">
+                            <div class="card" style="width: 18rem;">
+                                <div class="card-header" id="current-score">
+                                  Current Score:0-0
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                  <li class="list-group-item" id="game-status">Waiting for opponent</li>
+                                  
+                                </ul>
+                            </div>
+
+                    </div>
+                    <div id="chat-window">
+                            <div class="card" style="width: 18rem;">
+                                <div class="card-header">
+                                  Chat
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                  <li class="list-group-item">chat goes here</li>
+                                      
+                                </ul>
+                            </div>
+
+
+                    </div>
                 </div>
             </div>
 
         </div>
-        <div class="col-md-3" id="player2-window">
-            player 2
+        <div class="col-md-3">
+            <h1 id="player2-waiting">Waiting for player</h1>
+            <div class="card" style="width: 18rem;" id="player2-window">
+                <div class="card-header">
+                    <h3  id="player2-username"></h3>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" id="player2-pick">
+                        <h5 id="player2-status">Waiting for oponent to login</h5>
+                        <div id="player2-buttons">
+                            <button type="button" class="btn btn-primary" id="player2-rock" data-selection="rock">Rock</button>
+                            <button type="button" class="btn btn-primary" id="player2-paper" data-selection="paper">Paper</button>
+                            <button type="button" class="btn btn-primary" id="player2-scissors" data-selection="scissors">Scissors</button>
+
+                        </div>
+                    </li>
+                    <li class="list-group-item" id="player2-wins">Wins:</li>
+                    <li class="list-group-item" id="player2-losses">Losses:</li>
+                    <li class="list-group-item" id="player2-ties">Ties:</li>
+                </ul>
+            </div>
         </div>
 
     </div>
 
     
-
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
